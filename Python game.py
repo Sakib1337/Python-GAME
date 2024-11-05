@@ -15,23 +15,22 @@ sprint("The Python kingdom is a land of riches and dangers but thoes who succed 
 
 
 ### prompt user for choice
-sprint("What is your name" )
-advname = input("> ")
-sprint(f'I greet you {advname}')
-start = input('shall we begin?')
+advname = input("What is your name adventurer? ")
+print('I greet you, ' + advname +'.')
+start = input('shall we begin(yes/no)?  ')
 if start == 'yes':
     sprint('very well let us begin')
-    scene1= input('where do which to begin a camp in the forest or and Inn in a town?  ')
+    scene1= input('so ' + advname + ' where do which to begin a camp in the forest or and Inn in a town(TOWN WIP PLEASE SELECT forest?)  ')
 else:
     sprint('very well your adventure Ends bitterly GAME OVER!!!')
     quit()
 if scene1 == 'forest':
-    print ('You start your adventure in a camp in the forest')
-    response = input('you look into your bag and see a apple and bannana, which do you eat first?' )
-    if response == 'apple':
+    sprint ('You start your adventure in a camp in the forest')
+    response = input('you look into your bag and see a apple(1) and bannana(2), which do you eat first (enter one number?' )
+    if response == '1':
         print('you eat the apple and you feel alot healther, but you realise it was a poisoned apple you fall dead.')
         quit()
-    elif response == 'bannana':
+    elif response == '2':
         print('despite eating a fruit you dont feel to different.')
         
     else:
@@ -50,7 +49,7 @@ else:
 
 scene3 = input('The merchant:"good sire can you help me a group of goblins attacked me and took my satchals" will you help him or be on your way ')
 if scene3 == 'help':
-    print(f'you introduce yourself and offer to help the strained,the merchant elated says"thank you {advname} if you do this I am forver in you debt. remember these goblins are crafty and will try to trick you they left eastward I belive they have a cave there be careful and good luck.') 
+    print('you introduce yourself and offer to help the strained,the merchant elated says"thank you ' + advname + ' if you do this I am forver in you debt. remember these goblins are crafty and will try to trick you they left eastward I belive they have a cave there be careful and good luck.') 
 elif scene3 == 'leave':
     print('you decide not to help the merchant and go on your way, I guess you have more important things to do.')
     quit()
@@ -109,16 +108,15 @@ else:
  print('"you choose poorly" the golbin leader say sending his green horde at you killing you in proccess.')
  quit()
 
-scene6 = input(f'retracing you steps you make you way to the merchant who is hold up in an inn awaiting your return,"ah {advname} were you able to get my items?"')
+scene6 = input('retracing you steps you make you way to the merchant who is hold up in an inn awaiting your return,"ah ' + advname + ' were you able to get my items?"')
 if scene6 == 'no':
     print('"nooo (sight) now ill never return to my bussiness again." you leave the merchant to mourn his loss knowing full well you have his riches and you intend to enrich yourself with it. you have achived the GREED ENDING GAME OVER')
     quit()
 elif scene6 == 'yes':
-    print(f'"oh thank you {advname} you saved my bussiness as a reward how about i give 1000 gold for you deeds and if you need anything else look me up ill give you a discount" you leave the merchant in good terms and a warm feeling in heart knowing you did some good adventuring, you have achived the HEROIC ENDING GAME OVER')
+    print('"oh thank you ' + advname + ' you saved my bussiness as a reward how about i give 1000 gold for you deeds and if you need anything else look me up ill give you a discount" you leave the merchant in good terms and a warm feeling in heart knowing you did some good adventuring, you have achived the HEROIC ENDING GAME OVER')
     quit()
 else:
  print('invalid please choose!.')
  quit()
 
  
-
