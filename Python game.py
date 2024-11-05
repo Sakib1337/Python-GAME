@@ -1,18 +1,29 @@
+import sys,time,os
+from random import randint
+from datetime import datetime
+
+
+def sprint(str): # print slowly function
+    for c in str + '\n': 
+        sys.stdout.write(c) # print 1 letter at a time
+        sys.stdout.flush() # clear the print buffer
+        time.sleep(0.01) # time delay
+
 ### print welcome message
-print("Welcome adveturer to Journey to the Python Kingdom ")
-print("The Python kingdom is a land of riches and dangers but thoes who succed will find sectrets beyond thier imagination")
+sprint("Welcome adveturer to Journey to the Python Kingdom ")
+sprint("The Python kingdom is a land of riches and dangers but thoes who succed will find sectrets beyond thier imagination")
 
 
 ### prompt user for choice
-print("What is your name" )
+sprint("What is your name" )
 advname = input("> ")
-print(f'I greet you {advname}')
+sprint(f'I greet you {advname}')
 start = input('shall we begin?')
 if start == 'yes':
-    print('very well let us begin')
+    sprint('very well let us begin')
     scene1= input('where do which to begin a camp in the forest or and Inn in a town?  ')
 else:
-    print('very well your adventure Ends bitterly')
+    sprint('very well your adventure Ends bitterly GAME OVER!!!')
     quit()
 if scene1 == 'forest':
     print ('You start your adventure in a camp in the forest')
